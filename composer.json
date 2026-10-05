@@ -1,0 +1,23 @@
+{
+	"name": "nextcloud/psalm-plugin",
+	"description": "Psalm checks shared by Nextcloud server and apps",
+	"type": "psalm-plugin",
+	"license": "AGPL-3.0-or-later",
+	"require": {
+		"php": "^8.1",
+		"vimeo/psalm": "^6.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Nextcloud\\Psalm\\": "src/"
+		}
+	},
+	"scripts": {
+		"test": "php tests/run.php"
+	},
+	"extra": {
+		"psalm": {
+			"pluginClass": "Nextcloud\\Psalm\\Plugin"
+		}
+	}
+}
