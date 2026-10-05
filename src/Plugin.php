@@ -11,6 +11,7 @@ namespace Nextcloud\Psalm;
 
 use Nextcloud\Psalm\Checker\AppFrameworkTainter;
 use Nextcloud\Psalm\Checker\AttributeNamedParameters;
+use Nextcloud\Psalm\Checker\ExpensiveMethodChecker;
 use Nextcloud\Psalm\Checker\InArrayStrictChecker;
 use Nextcloud\Psalm\Checker\LogicalOperatorChecker;
 use Nextcloud\Psalm\Checker\StaticVarsChecker;
@@ -23,6 +24,7 @@ class Plugin implements PluginEntryPointInterface {
 	private const CHECKERS = [
 		AppFrameworkTainter::class,
 		AttributeNamedParameters::class,
+		ExpensiveMethodChecker::class,
 		InArrayStrictChecker::class,
 		LogicalOperatorChecker::class,
 		StaticVarsChecker::class,
